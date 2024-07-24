@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>IPHONE 15 PRO MAX - Shayan Shah</title>
+    <link rel="stylesheet" href="style.css" />
+    <link rel="icon" type="image/x-icon" href="./images/favicon1.png" />
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div class="main">
+      <nav>
+        <div class="logo">
+          <img src="./images/main Logo.png" />
+        </div>
+        <div class="nav-links">
+          <ul>
+            <li class="active"><i class="bx bxs-home"></i>Home</li>
+            <li><a href="#"></a>Phone</li>
+            <li><a href="#"></a>Accessories</li>
+            <li><a href="#"></a>Cart</li>
+          </ul>
+        </div>
+      </nav>
+      <div class="information">
+        <div class="overlay"></div>
+        <img src="./images/promax2.png" class="mobile" />
+        <div id="circle">
+          <div class="feature one">
+            <img src="./images/camera.png" alt="" />
+            <div>
+              <h1>Camera</h1>
+              <p>48MP Main: 24 mm, ƒ/1.78 aperture</p>
+            </div>
+          </div>
+          <div class="feature two">
+            <img src="./images/processor.png" alt="" />
+            <div>
+              <h1>Prcessor</h1>
+              <p>A17 Pro chip New 6"core CPU</p>
+            </div>
+          </div>
+          <div class="feature three">
+            <img src="./images/display.png" alt="" />
+            <div>
+              <h1>Display</h1>
+              <p>6.7" inch Super Retina XDR</p>
+            </div>
+          </div>
+          <div class="feature four">
+            <img src="./images/battery.png" alt="" />
+            <div>
+              <h1>Battery Life</h1>
+              <p>Li-Ion 4441 mAh Up to 95 hours</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <img src="./images/arrow.png" id="upBtn" />
+        <h3>Features</h3>
+        <img src="./images/arrow.png" id="downBtn" />
+      </div>
+    </div>
+
+    <script>
+      var circle = document.getElementById("circle");
+      var upBtn = document.getElementById("upBtn");
+      var downBtn = document.getElementById("downBtn");
+
+      var rotatevalue = circle.style.transform;
+      var rotateSum;
+
+      upBtn.onclick = function () {
+        rotateSum = rotatevalue + "rotate(-90deg)";
+        circle.style.transform = rotateSum;
+        rotatevalue = rotateSum;
+      };
+
+      downBtn.onclick = function () {
+        rotateSum = rotatevalue + "rotate(90deg)";
+        circle.style.transform = rotateSum;
+        rotatevalue = rotateSum;
+      };
+    </script>
+  </body>
+</html>
